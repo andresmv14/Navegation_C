@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/navP">
+
+    <fragment
+        android:id="@+id/navP"
+        android:name="com.mendozavalerio.navegacion.navP"
+        android:label="fragment_nav_p"
+        tools:layout="@layout/fragment_nav_p" >
+        <action
+            android:id="@+id/action_navP_to_navS"
+            app:destination="@id/navS" />
+    </fragment>
+    <fragment
+        android:id="@+id/navS"
+        android:name="com.mendozavalerio.navegacion.navS"
+        android:label="fragment_nav_s"
+        tools:layout="@layout/fragment_nav_s" >
+        <action
+            android:id="@+id/action_navS_to_navP"
+            app:destination="@id/navP" />
+    </fragment>
+</navigation>
